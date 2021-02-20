@@ -164,7 +164,9 @@ class ReversibleGraphNet(nn.Module):
         ind_out are the indexes of the special nodes InputNode and OutputNode
         in this list.'''
         super(ReversibleGraphNet, self).__init__()
+        print('BRAND NEW')
 
+        self.results = []
         # Gather lists of input and output nodes
         if ind_in is not None:
             if isinstance(ind_in, int):
@@ -276,6 +278,10 @@ class ReversibleGraphNet(nn.Module):
             try:
                 results = self.module_list[o[0]]([self.variable_list[i]
                                                   for i in o[1]], rev=rev)
+
+                to_append = (f'output of {o[0]}: {self.module_list[o[0]]}', self.module_list[o[0]]([self.variable_list[i] for i in o[1]], rev=rev))
+                print(len(to_append))
+                self.results.append(to_append)
             except TypeError:
                 raise RuntimeError("Are you sure all used Nodes are in the "
                                    "Node list?")
