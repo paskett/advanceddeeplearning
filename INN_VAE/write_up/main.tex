@@ -70,7 +70,7 @@ citecolor=blue
 \section{Introduction}
 As we gain access to more and more unstructured data, unsupervised learning methods become more and more vital.
 Among existing unsupervised deep learning models, variational autoencoders have become prominent.
-An autoencoder uses an unlabelled dataset to create more compactly encoded representations of the dataset.
+An autoencoder uses an unlabelled dataset to create more compactly encoded representations of the data.
 This is done by introducing a bottleneck to the architecture, as the following image (courtesy of \cite{bottleneck_picture}) depicts:
 \begin{figure}[!htb]
 \begin{center}
@@ -101,10 +101,10 @@ Theoretically, an INN can be built to any depth by stacking any number of invert
 \end{figure}
 
 Although traditional neural networks are universal function approximators, INNs are limited to approximating bijective functions.
-The question you might be asking, then, is this: if INNs can only approximate bijective functions, how can an INN become an autoencoder?
-Since the point of an autoencoder is to encode data in a smaller-dimensional latent space, a bijection won't work, right?
+The question, then, is this: if INNs can only approximate bijective functions, how can an INN become an autoencoder?
+Since the goal of an autoencoder is to encode data in a smaller-dimensional latent space, how can a bijection achieve this?
 
-The main contribution of Nguyen, et al. was to come up with a creative solution to this problem.
+The main contribution of Nguyen, et al. was to provide a creative solution to this problem.
 They do so by "zero-padding" the output of the INN.
 For example, suppose our inputs have a dimension of 1000, and we wish to create a bottleneck of size 20.
 To train our INN, we give it the input $ x $, obtaining $ \text{INN}(x) = y $.
@@ -140,7 +140,7 @@ Primarily, we seek to answer the following questions: \begin{itemize}
      In order to answer these questions, we utilized the same models and architecture employed by Nguyen et al.
      We chose to compare the information loss across each layer in a classical model with its INN counterpart using two different datasets: MNIST and CIFAR-10. We chose these datasets so that our results could be comparable to the findings of Nguyen et al. Although we hoped to also used the CelebA data to more closely match the process in \cite{Nguyen2019}, computational and time constraints prevented us from examining this dataset as well.
 
-     We were primarily interested in three metrics for each model and dataset: Shannon entropy of the output at each layer, the relative entropy (measured by KL-Divergence) of the input and output at each layer, and the relative entropy of the model input and reconstructed model output. We measured these metrics on four models total: An Invertible Neural Net and a classical autoencoder on the CIFAR-10 dataset, and an Invertible Neural Net and a classical autoendcoder on the MNIST dataset.
+     We were primarily interested in three metrics for each model and dataset: Shannon entropy of the output at each layer, the relative entropy (measured by KL-Divergence) of the input and output at each layer, and the relative entropy between the model input and reconstructed model output. We measured these metrics on four models total: An Invertible Neural Net and a classical autoencoder on the CIFAR-10 dataset, and an Invertible Neural Net and a classical autoendcoder on the MNIST dataset.
 
      We partitioned the datasets into a training and test set, trained the models, and then exmained our information metrics on the test set to see how much information the models would retain on unseen data. By examining these three metrics, we hoped to find a clear indicator of whether or not INNs limit information loss to a higher degree than classical autoencoders.
 
@@ -176,7 +176,7 @@ Primarily, we seek to answer the following questions: \begin{itemize}
         \includegraphics[height=10cm]{./pics/relative_entropies.pdf}
      \end{center}
      \end{figure}
-      The results of this metric are more striking. We can see from Figure 4 that the relative entropies at each layer are much more constant in the INN autoencoders than they are in the classical autoencoders. Further, the classical autoencoders only see significant relative entropy values at the bottleneck layers and the output layers. This suggests that while both styles of autoencoder do a good job of preserving information from layer to layer, the classical autoencoder does it in an uneven way, providing almost no distributional change at non-bottleneck layers, and packing most of the distributional change into the bottleneck and outputs. In contrast, the INN autoencoder loses information at a more constant rate.
+      The results of this metric are even more striking. We can see from Figure 4 that the relative entropies at each layer are much more constant in the INN autoencoders than they are in the classical autoencoders. Further, the classical autoencoders only see significant relative entropy values at the bottleneck layers and the output layers. This suggests that while both styles of autoencoder do a good job of preserving information from layer to layer, the classical autoencoder does it in an uneven way, providing almost no distributional change at non-bottleneck layers, and packing most of the distributional change into the bottleneck and outputs. In contrast, the INN autoencoder loses information at a more constant rate.
 
      \subsubsection{Relative entropy between inputs and outputs}
       The relative entropies between the inputs and outputs of each model are:
