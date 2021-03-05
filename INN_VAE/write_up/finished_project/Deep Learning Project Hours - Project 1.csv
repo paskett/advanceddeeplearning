@@ -1,0 +1,10 @@
+,,,
+Date,Number of Hours,Task Type,Description
+1/29/31,4,Studying INNs,Developing experiment and studying INNs/autoencoders
+2/13/21,2,Researched related papers,Attempted to apply different information-theoretic ideas to Nguyen et al. paper
+2/13/21,1,Implement info theory tests,"Read Nguyen et al. paper, designed information theory tasks to experiment on"
+2/17/21,2,Develop/train models,Worked on getting INN and classic models ready to train
+2/18/21,2,Train models,Tried to train on CelebA dataset; decided to scrap due to time constraints partly because the dataset is so large (~1.6 GB)
+2/18/21,1,Train models,Trained on MNIST and CIFAR-10 datasets
+2/19/21,4,Fixing experiments,Creating entropy tests and code to examine internal layers of NN architectures
+2/20/21,10,Write up/Running code,"Worked on write up, wrangled latex, developed and ran experiments"

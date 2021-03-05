@@ -1,0 +1,49 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Doersch(2021)]{VAEtutorial}
+Carl Doersch.
+\newblock Tutorial on variational autoencoders.
+\newblock 2021.
+\newblock URL \url{http://arxiv.org/abs/1606.05908}.
+
+\bibitem[Hjelm et~al.(2019)Hjelm, Fedorov, Lavoie-Marchildon, Grewal, Bachman,
+  Trischler, and Bengio]{deep_infomax}
+R~Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil
+  Bachman, Adam Trischler, and Yoshua Bengio.
+\newblock Learning deep representations by mutual information estimation and
+  maximization.
+\newblock 2019.
+\newblock URL \url{http://arxiv.org/abs/1808.06670}.
+
+\bibitem[Hollenstein et~al.(2019)Hollenstein, Lichtensteiger, Stadelmann,
+  Amirian, Budde, Meierhofer, F\"{u}chslin, and Friedli]{bottleneck_picture}
+Lukas Hollenstein, Lukas Lichtensteiger, Thilo Stadelmann, Mohammadreza
+  Amirian, Lukas Budde, J\"{u}rg Meierhofer, Rudolf~M. F\"{u}chslin, and Thomas
+  Friedli.
+\newblock Unsupervised learning and simulation for complexity management in
+  business operations.
+\newblock In \emph{Applied Data Science}, pages 313--331. Springer
+  International Publishing, 2019.
+\newblock \doi{10.1007/978-3-030-11821-1_17}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-11821-1_17}.
+
+\bibitem[Nguyen et~al.(2019)Nguyen, Ardizzone, and K\"{o}the]{Nguyen2019}
+The-Gia~Leo Nguyen, Lynton Ardizzone, and Ullrich K\"{o}the.
+\newblock Training invertible neural networks as autoencoders.
+\newblock In \emph{Lecture Notes in Computer Science}, pages 442--455. Springer
+  International Publishing, 2019.
+\newblock \doi{10.1007/978-3-030-33676-9_31}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-33676-9_31}.
+
+\bibitem[Yu and Principe(2019)]{infotheoretic_vaes}
+Shujian Yu and Jose~C. Principe.
+\newblock Understanding autoencoders with information theoretic concepts.
+\newblock 2019.
+\newblock URL \url{http://arxiv.org/abs/1804.00057}.
+
+\end{thebibliography}
